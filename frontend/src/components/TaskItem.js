@@ -1,8 +1,18 @@
+
 import React from 'react';
+import { useTheme } from '../context/ThemeContext'; // import ThemeContext
 
 const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
+  const { theme } = useTheme();
+
+  const isDark = theme === 'dark';
+
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+    <div
+      className={`border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow ${
+        isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
+      }`}
+    >
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <div className="flex items-center space-x-2">
@@ -11,6 +21,8 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
               className={`w-4 h-4 rounded border-2 flex items-center justify-center ${
                 task.status === 'completed'
                   ? 'bg-green-500 border-green-500'
+                  : isDark
+                  ? 'border-gray-600 hover:border-green-500'
                   : 'border-gray-300 hover:border-green-500'
               }`}
             >
@@ -34,6 +46,8 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
               className={`text-lg font-medium ${
                 task.status === 'completed'
                   ? 'text-gray-500 line-through'
+                  : isDark
+                  ? 'text-white'
                   : 'text-gray-900'
               }`}
             >
@@ -44,7 +58,11 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
           {task.description && (
             <p
               className={`mt-2 text-sm ${
-                task.status === 'completed' ? 'text-gray-400' : 'text-gray-600'
+                task.status === 'completed'
+                  ? 'text-gray-400'
+                  : isDark
+                  ? 'text-gray-300'
+                  : 'text-gray-600'
               }`}
             >
               {task.description}
@@ -61,7 +79,11 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
             >
               {task.status === 'completed' ? 'Completed' : 'Pending'}
             </span>
-            <span className="text-xs text-gray-500">
+            <span
+              className={`${
+                isDark ? 'text-gray-400' : 'text-gray-500'
+              } text-xs`}
+            >
               {new Date(task.createdAt).toLocaleDateString()}
             </span>
           </div>
@@ -70,7 +92,11 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
         <div className="flex space-x-2 ml-4">
           <button
             onClick={() => onEdit(task)}
-            className="text-blue-600 hover:text-blue-800"
+            className={`${
+              isDark
+                ? 'text-blue-400 hover:text-blue-600'
+                : 'text-blue-600 hover:text-blue-800'
+            }`}
           >
             <svg
               className="w-5 h-5"
@@ -88,7 +114,11 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
           </button>
           <button
             onClick={() => onDelete(task._id)}
-            className="text-red-600 hover:text-red-800"
+            className={`${
+              isDark
+                ? 'text-red-400 hover:text-red-600'
+                : 'text-red-600 hover:text-red-800'
+            }`}
           >
             <svg
               className="w-5 h-5"
@@ -111,3 +141,4 @@ const TaskItem = ({ task, onEdit, onDelete, onToggleStatus }) => {
 };
 
 export default TaskItem;
+
