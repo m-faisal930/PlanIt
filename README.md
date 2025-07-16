@@ -4,6 +4,7 @@
 
 PlanIT is a comprehensive task management application built with the MERN stack (MongoDB, Express.js, React, and Node.js). It offers a beautiful, interactive interface with animations, authentication, task management, and even productivity enhancement features like music, games, and exercises.
 
+
 ## Table of Contents
 - [Features](#features)
 - [Screenshots](#screenshots)
