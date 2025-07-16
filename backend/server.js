@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 const allowedOrigins = [
-  'https://plan-it-backend-three.vercel.app/',
+  'https://plan-it-mu.vercel.app/',
   // Add localhost if needed for development
   'http://localhost:3000',
 ];
