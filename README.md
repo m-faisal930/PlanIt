@@ -48,7 +48,7 @@ PlanIT is a comprehensive task management application built with the MERN stack 
 ## Screenshots
 
 <!-- Add your screenshots here with appropriate captions -->
-![Login Screen](https://via.placeholder.com/600x400?text=Login+Screen)
+<img width="823" height="372" alt="image" src="https://github.com/user-attachments/assets/ab71dd8e-8460-4405-8cdd-9733d34b4ece" />
 *Login Screen with dark/light mode toggle*
 
 ![Task Dashboard](https://via.placeholder.com/600x400?text=Task+Dashboard)
