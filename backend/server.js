@@ -5,8 +5,18 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+const allowedOrigins = [
+  'https://plan-ov6htge0u-m-faisal930s-projects.vercel.app',
+  // Add localhost if needed for development
+  'http://localhost:3000',
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Database connection
