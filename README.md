@@ -51,13 +51,17 @@ PlanIT is a comprehensive task management application built with the MERN stack 
 <img width="823" height="372" alt="image" src="https://github.com/user-attachments/assets/ab71dd8e-8460-4405-8cdd-9733d34b4ece" />
 *Login Screen with dark/light mode toggle*
 
-![Task Dashboard](https://via.placeholder.com/600x400?text=Task+Dashboard)
+![Task Dashboard]<img width="948" height="380" alt="image" src="https://github.com/user-attachments/assets/bbfacf3b-c9bf-4a06-b337-7a245cfd7b11" />
+<img width="936" height="395" alt="image" src="https://github.com/user-attachments/assets/7d262487-87e9-422e-99a7-3faaa2756d05" />
+
+
 *Main task dashboard with filter options*
 
-![Task Creation Modal](https://via.placeholder.com/600x400?text=Task+Creation+Modal)
+![Task Creation Modal](<img width="958" height="378" alt="image" src="https://github.com/user-attachments/assets/c04fd29a-a1f3-48f0-ac6c-8164a7b25c38" />)
 *Modal for creating/editing tasks*
 
-![Refreshment Break](https://via.placeholder.com/600x400?text=Refreshment+Break)
+![Refreshment Break](<img width="743" height="422" alt="image" src="https://github.com/user-attachments/assets/c5d73b2f-0b31-4b7d-94f4-5a46e092df38" />
+)
 *Refreshment break section with music and games*
 
 ## Installation
