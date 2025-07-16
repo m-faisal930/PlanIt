@@ -5,29 +5,10 @@ require('dotenv').config();
 
 const app = express();
 
-const allowedOrigins = [
-  'https://plan-it-mu.vercel.app/',
-  // Add localhost if needed for development
-  'http://localhost:3000',
-];
-
-
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    credentials: true,
-  })
-);
 
 
 
-
+app.use(cors())
 app.use(express.json());
 
 // Database connection
